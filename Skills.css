@@ -1,0 +1,128 @@
+/* Skills Section Layout */
+.skills-section {
+  padding: 80px 20px;
+  background-color: rgba(197, 197, 207, 0.568);
+  color: #111;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff8800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgb(250, 248, 248);
+  padding: 40px 20px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Image */
+.skill-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Skill Name */
+.skill-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 30px 15px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-image img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.skills-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-icon {
+  font-size: 2.5rem;
+  color: #ff8800;
+  display: flex;
+  align-items: center;
+}
+.animated-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #ff8800;
+  align-items: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+}
+.animated-heading span {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .skills-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .animated-heading {
+    justify-content: center;
+    font-size: 2rem;
+  }
+}

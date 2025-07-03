@@ -1,0 +1,19 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  font-size: 2.5rem; /* Equivalent to 2xl size */
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.scroll-to-top:hover .arrow-icon {
+  color: #ff8800; /* Yellow on hover */
+  transform: scale(1.2);
+}

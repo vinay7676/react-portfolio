@@ -1,0 +1,163 @@
+/* Layout */
+.home-section {
+  padding: 60px 20px;
+  background-color: rgba(55, 13, 207, 0.37);
+   color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Text Content */
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+
+.greeting {
+  font-size: 3rem; /* 3xl */
+  margin-bottom: 10px;
+}
+
+
+
+.changing-text {
+  font-size: 3rem; /* 3xl */
+  margin: 10px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.changing-text .dynamic {
+  font-weight: bold;
+  color: #ff8800;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.name {
+  font-size: 2.5rem; /* 3xl */
+  font-weight: bold;
+  margin: 10px 0 20px;
+  color: #000;
+}
+
+/* Button */
+.button-container {
+  margin-top: 20px;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  gap: 8px; /* ⬅️ adds spacing between text and icon */
+}
+
+.about-button:hover {
+  background-color: #e37000;
+  transform: scale(1.03); /* Optional: slight zoom on hover */
+}
+
+.arrow-icon {
+  font-size: 1.1rem;         /* ⬅️ Slightly smaller, matches text better */
+  vertical-align: middle;
+}
+
+
+/* Social Icons */
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.social-icons .icon {
+  font-size: 1.6rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2);
+  color: #0077b5;
+}
+
+/* Image Section */
+.image-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px #ff8800; /* border effect via box-shadow */
+  z-index: 2;
+  position: relative;
+}
+
+/* Removed the old border element completely */
+.image-border {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-border {
+    display: none;
+  }
+}
+
+/* Icon animation like Nav.jsx */
+.fade-in-icon {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInIcon 0.5s ease forwards;
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

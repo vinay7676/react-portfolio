@@ -1,0 +1,106 @@
+/* Work Section Base */
+.work-section {
+  padding: 80px 20px;
+  background-color: rgba(64, 64, 247, 0.493);
+  min-height: 100vh;
+  color: #111;
+}
+
+/* Work Container */
+.work-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Heading Styles */
+.work-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.work-icon {
+  font-size: 2.5rem;
+  color: #0077ff;
+}
+
+.animated-heading {
+  font-size: 2.4rem;
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+}
+
+.animated-heading span {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card Style */
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  perspective: 1000px;
+}
+
+/* Card Image */
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay Eye Icon */
+.overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.eye-icon.small {
+  font-size: 1.5rem;
+  color: #0077ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .animated-heading {
+    font-size: 1.8rem;
+  }
+}

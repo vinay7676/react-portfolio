@@ -1,0 +1,148 @@
+.footer-section {
+  background-color: #111;
+  color: #f5f5f5;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+/* Common Column Styling */
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+/* About */
+.footer-about h2 {
+  font-size: 1.8rem;
+  color: #ff8800;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+/* Quick Links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  color: #ff8800;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-links li:hover {
+  transform: translateX(6px);
+}
+
+.link-icon {
+  color: #ff8800;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.link-icon:hover {
+  color: #ffdd00;
+}
+
+/* Contact Info */
+.footer-contact h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ff8800;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.footer-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-icon {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  color: #ffdd00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-links ul {
+    align-items: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}

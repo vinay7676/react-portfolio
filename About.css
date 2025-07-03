@@ -1,0 +1,230 @@
+.about-section {
+  background-color: #f4f6f8;
+  padding: 100px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: slideIn 1s ease forwards;
+}
+
+.about-text {
+  flex: 1;
+  color: #2d3436;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.section-heading h1 {
+  font-size: 2.7rem;
+  color: #1e272e;
+  font-weight: 800;
+  margin: 0;
+  position: relative;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #0984e3;
+}
+
+.summary {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #636e72;
+  animation: fadeUp 1.3s ease-in-out;
+}
+
+.highlight {
+  color: #0984e3;
+  font-weight: bold;
+}
+
+.contact-info {
+  margin: 25px 0;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #2f3542;
+  font-weight: 600;
+}
+
+.info-icon {
+  color: #0984e3;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0984e3;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-button:hover {
+  background-color: #0c6fd1;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ⭕️ Circular Profile Image with Effect */
+.image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.image-border {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 316px;
+  height: 316px;
+  border: 4px dashed #0984e3;
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotateBorder 8s linear infinite;
+}
+
+/* 🔁 Rotating Border Animation */
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🌟 Appear Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .section-heading {
+    justify-content: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .image-border {
+    width: 256px;
+    height: 256px;
+  }
+
+  .section-heading h1 {
+    font-size: 2rem;
+  }
+}
